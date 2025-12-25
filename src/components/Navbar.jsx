@@ -18,8 +18,8 @@ const Navbar = () => {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 className={`fixed w-full top-0 z-50 transition-all duration-500 ${scrolled
-                        ? 'glass shadow-lg py-3'
-                        : 'bg-transparent py-5'
+                    ? 'glass shadow-lg py-3'
+                    : 'bg-transparent py-5'
                     }`}
             >
                 <div className="container mx-auto px-6 lg:px-16">
@@ -47,13 +47,13 @@ const Navbar = () => {
 
                         {/* Desktop Menu */}
                         <div className="hidden lg:flex items-center gap-8">
-                            {['Products', 'Why AquaPure', 'For Business', 'Contact'].map((item) => (
+                            {['Products', 'Why AquaPure', 'For Business'].map((item) => (
                                 <a
                                     key={item}
                                     href={`#${item.toLowerCase().replace(' ', '-')}`}
                                     className={`font-medium transition-all hover:scale-105 ${scrolled
-                                            ? 'text-charcoal hover:text-glacier-400'
-                                            : 'text-white hover:text-glacier-300'
+                                        ? 'text-charcoal hover:text-glacier-400'
+                                        : 'text-white hover:text-glacier-300'
                                         }`}
                                 >
                                     {item}
@@ -87,7 +87,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: '100%' }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: '100%' }}
-                    className="fixed inset-0 bg-ocean z-40 lg:hidden flex flex-col items-center justify-center gap-8"
+                    className="fixed inset-0 bg-ocean z-[60] lg:hidden flex flex-col items-center justify-center gap-8"
                 >
                     <button
                         onClick={() => setMobileMenu(false)}
@@ -96,7 +96,7 @@ const Navbar = () => {
                         <X size={32} />
                     </button>
 
-                    {['Products', 'Why AquaPure', 'For Business', 'Contact'].map((item) => (
+                    {['Products', 'Why AquaPure', 'For Business'].map((item) => (
                         <a
                             key={item}
                             href={`#${item.toLowerCase().replace(' ', '-')}`}
