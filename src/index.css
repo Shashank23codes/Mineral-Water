@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@theme {
+  /* AquaPure Exclusive Color Palette */
+  --color-glacier-50: #F6FEFD;
+  --color-glacier-100: #E0FAF8;
+  --color-glacier-200: #C1F5F1;
+  --color-glacier-300: #8EEEE7;
+  --color-glacier-400: #2ED3C6;
+  --color-glacier-500: #1AB5A9;
+  --color-glacier-600: #14938A;
+  --color-glacier-700: #107670;
+  --color-glacier-800: #0E5E6F;
+  --color-glacier-900: #0A4A56;
+
+  --color-ocean: #0E5E6F;
+  --color-lime: #B4F000;
+  --color-ice: #F6FEFD;
+  --color-charcoal: #1E2A32;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: var(--color-charcoal);
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-glacier-400);
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Water Flow Animations */
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-25px) translateY(-10px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-wave {
+  animation: wave 8s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 2s ease-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(46, 211, 198, 0.2) 50%,
+      transparent 100%);
+  background-size: 1000px 100%;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(14, 94, 111, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(46, 211, 198, 0.2);
+}
+
+/* Water Droplet Shapes */
+.droplet-shape {
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #2ED3C6 0%, #0E5E6F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Wave Divider */
+.wave-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 200%;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23F6FEFD'/%3E%3C/svg%3E");
+  background-size: 50% 100px;
+  animation: wave 15s linear infinite;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6FEFD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2ED3C6 0%, #0E5E6F 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2ED3C6;
+}
