@@ -103,31 +103,47 @@ const Contact = () => {
 
                             <div>
                                 <label className="text-white text-sm font-medium mb-2 block">Business Type *</label>
-                                <select
-                                    required
-                                    className="w-full px-4 py-3 bg-white/10 border border-glacier-400/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-lime backdrop-blur-sm transition-all appearance-none cursor-pointer"
-                                >
-                                    <option value="" className="bg-ocean">Select type</option>
-                                    <option value="home" className="bg-ocean">Home / Personal Use</option>
-                                    <option value="office" className="bg-ocean">Office / Corporate</option>
-                                    <option value="event" className="bg-ocean">Event / Wedding</option>
-                                    <option value="distributor" className="bg-ocean">Become a Distributor</option>
-                                    <option value="retail" className="bg-ocean">Retail Store</option>
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        required
+                                        className="w-full px-4 py-3 bg-white/10 border border-glacier-400/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-lime backdrop-blur-sm transition-all appearance-none cursor-pointer pr-10"
+                                        style={{
+                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                                            backgroundRepeat: 'no-repeat',
+                                            backgroundPosition: 'right 0.75rem center',
+                                            backgroundSize: '1.25rem'
+                                        }}
+                                    >
+                                        <option value="" className="bg-ocean text-white">Select type</option>
+                                        <option value="home" className="bg-ocean text-white">Home / Personal Use</option>
+                                        <option value="office" className="bg-ocean text-white">Office / Corporate</option>
+                                        <option value="event" className="bg-ocean text-white">Event / Wedding</option>
+                                        <option value="distributor" className="bg-ocean text-white">Become a Distributor</option>
+                                        <option value="retail" className="bg-ocean text-white">Retail Store</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div>
                                 <label className="text-white text-sm font-medium mb-2 block">Quantity Requirement *</label>
-                                <select
-                                    required
-                                    className="w-full px-4 py-3 bg-white/10 border border-glacier-400/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-lime backdrop-blur-sm transition-all appearance-none cursor-pointer"
-                                >
-                                    <option value="" className="bg-ocean">Select quantity</option>
-                                    <option value="1-50" className="bg-ocean">1-50 bottles/jars</option>
-                                    <option value="50-200" className="bg-ocean">50-200 bottles/jars</option>
-                                    <option value="200-500" className="bg-ocean">200-500 bottles/jars</option>
-                                    <option value="500+" className="bg-ocean">500+ bottles/jars (Bulk)</option>
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        required
+                                        className="w-full px-4 py-3 bg-white/10 border border-glacier-400/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-lime backdrop-blur-sm transition-all appearance-none cursor-pointer pr-10"
+                                        style={{
+                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                                            backgroundRepeat: 'no-repeat',
+                                            backgroundPosition: 'right 0.75rem center',
+                                            backgroundSize: '1.25rem'
+                                        }}
+                                    >
+                                        <option value="" className="bg-ocean text-white">Select quantity</option>
+                                        <option value="1-50" className="bg-ocean text-white">1-50 bottles/jars</option>
+                                        <option value="50-200" className="bg-ocean text-white">50-200 bottles/jars</option>
+                                        <option value="200-500" className="bg-ocean text-white">200-500 bottles/jars</option>
+                                        <option value="500+" className="bg-ocean text-white">500+ bottles/jars (Bulk)</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div>
